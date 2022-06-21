@@ -11,11 +11,6 @@ body {
   overflow: hidden;
   height: inherit;
 
-  background-image:url("janela.png");
-  background-size: 100%;
-  background-repeat:no-repeat;
- 
- background-attachment:fixed;
 }
 
 h1 {
@@ -29,6 +24,7 @@ h1 {
   color:rgb(BLUE);
   text-shadow: 0 0 4px white;
 }
+
 
 
 

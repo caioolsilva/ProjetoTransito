@@ -19,7 +19,7 @@ class Bola {
    //atualiza a posição da bola na tela
 
    update() {
-      if ((this.x + this.size) >= width) {
+    /*  if ((this.x + this.size) >= width) {
          this.velX = -(this.velX);
       }
 
@@ -33,7 +33,7 @@ class Bola {
    
       if ((this.y - this.size) <= 0) {
          this.velY = -(this.velY);
-      }
+      }*/
 
       this.x += this.velY;
       this.y += this.velY;

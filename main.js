@@ -16,13 +16,11 @@ function random(min, max) {
 
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
-}
-
-
-//define um vetor de bolas
+}//define um vetor de bolas
 const bolas = [];
+function criachuva(bols){
 
-while (bolas.length < 1000) {
+while (bolas.length < 100) {
    const size = random(2,3);
    const bola = new Bola(
       // posição de sempre uma bola de distância
@@ -30,21 +28,27 @@ while (bolas.length < 1000) {
       random(0 + size,width - size),
       random(0 + size,height - size),
       random(0,0),
-      random(0,5),
+      random(0,15),
       randomRGB(),
       size
    );
+      //atualiza o vetor
+  bols.push(bola);
+   }
 
-   //atualiza o vetor
-  bolas.push(bola);
+
+
+
+
 }
-
+criachuva(bolas);
 //realiza um loop em todas as bolas geradas
 function loop() {
-   ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+
+   ctx.fillStyle = 'rgba(255, 255, 255, 0.1 )';
    ctx.clearRect(0, 0,  width, height);
    ctx.fillRect(0, 0,  width, height);
-
+  criachuva(bolas);
    for (const bola of bolas) {
     bola.draw();
     bola.update();
