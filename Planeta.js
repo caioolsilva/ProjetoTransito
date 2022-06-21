@@ -11,7 +11,7 @@ class Bola {
 //desenha a bola na tela
    draw() {
       ctx.beginPath();
-      ctx.fillStyle = this.color;
+      ctx.fillStyle = this.color="#87CEEB";
       ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
       ctx.fill();
    }
@@ -30,7 +30,7 @@ class Bola {
       if ((this.y + this.size) >= height) {
          this.velY = -(this.velY);
       }
-
+   
       if ((this.y - this.size) <= 0) {
          this.velY = -(this.velY);
       }

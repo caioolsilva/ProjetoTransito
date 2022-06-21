@@ -10,7 +10,12 @@ html {
 body {
   overflow: hidden;
   height: inherit;
-"background-color: blue">
+
+  background-image:url("janela.png");
+  background-size: 100%;
+  background-repeat:no-repeat;
+ 
+ background-attachment:fixed;
 }
 
 h1 {
@@ -21,6 +26,9 @@ h1 {
   top: -4px;
   right: 5px;
 
-  color:rgb(BLUE));
+  color:rgb(BLUE);
   text-shadow: 0 0 4px white;
 }
+
+
+
