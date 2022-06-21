@@ -22,15 +22,15 @@ function randomRGB() {
 //define um vetor de bolas
 const bolas = [];
 
-while (bolas.length < 25) {
-   const size = random(10,20);
+while (bolas.length < 300) {
+   const size = random(5,5);
    const bola = new Bola(
       // posição de sempre uma bola de distância
       // fora das bordas para evitar erros de desenho
       random(0 + size,width - size),
       random(0 + size,height - size),
-      random(-7,7),
-      random(-7,7),
+      random(0,0),
+      random(0,5),
       randomRGB(),
       size
    );
@@ -41,7 +41,7 @@ while (bolas.length < 25) {
 
 //realiza um loop em todas as bolas geradas
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+   ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
    ctx.fillRect(0, 0,  width, height);
 
    for (const bola of bolas) {

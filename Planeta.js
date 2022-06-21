@@ -35,7 +35,7 @@ class Bola {
          this.velY = -(this.velY);
       }
 
-      this.x += this.velX;
+      this.x += this.velY;
       this.y += this.velY;
    }
 //veruifica a colisão entre as bolas
