@@ -20,7 +20,7 @@ function randomRGB() {
 const bolas = [];
 function criachuva(bols){
 
-while (bolas.length < 100) {
+while (bolas.length < 500) {
    const size = random(2,3);
    const bola = new Bola(
       // posição de sempre uma bola de distância
