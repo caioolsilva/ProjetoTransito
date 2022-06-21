@@ -22,8 +22,8 @@ function randomRGB() {
 //define um vetor de bolas
 const bolas = [];
 
-while (bolas.length < 300) {
-   const size = random(5,5);
+while (bolas.length < 1000) {
+   const size = random(2,3);
    const bola = new Bola(
       // posição de sempre uma bola de distância
       // fora das bordas para evitar erros de desenho
@@ -41,7 +41,8 @@ while (bolas.length < 300) {
 
 //realiza um loop em todas as bolas geradas
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+   ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+   ctx.clearRect(0, 0,  width, height);
    ctx.fillRect(0, 0,  width, height);
 
    for (const bola of bolas) {
@@ -49,8 +50,9 @@ function loop() {
     bola.update();
     bola.collisionDetect(bolas);
    }
-
+   
    requestAnimationFrame(loop);
-}
+   
+  }
 
 loop();
